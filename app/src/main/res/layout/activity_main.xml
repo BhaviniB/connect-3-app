@@ -1,22 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.bhavinibatra.connect_3.MainActivity">
-
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:background="@drawable/board"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:columnCount="3"
         android:rowCount="3"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="16dp">
-
+        android:background="@drawable/board"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/gridLayout">
 
         <ImageView
             android:layout_width="90dp"
@@ -121,7 +116,31 @@
 
     </GridLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fffaff0b"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/playAgainLayout"
+        android:visibility="invisible">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/winnerMessage"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp" />
 
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:id="@+id/playAgainButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="playAgain" />
+    </LinearLayout>
 </RelativeLayout>
